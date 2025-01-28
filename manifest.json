@@ -3,7 +3,11 @@
     "name": "UniversalBookmarker",
     "version": "1.0",
     "description": "Sync your bookmarks across all chromium supported browsers",
-    "permissions": ["storage","tabs"],
+    "permissions": ["storage",
+    "identity", 
+    "activeTab",
+    "https://*.firebaseio.com/",
+    "https://*.googleapis.com/"],
     "host_permissions": [
       "https://*/*",
       "http://*/*"
@@ -12,20 +16,20 @@
       {
         "matches": ["https://*/*", "http://*/*"],
         "js": ["content-script.js"],
-        "css": ["styles.css"]
+        "css": ["styles.css","bookmarkbtn.css"]
       }
     ],
     "icons": {
-      "16": "",
-      "48": "",
-      "128":""
+      "16": "icon.jpg",
+      "48": "icon.jpg",
+      "128":"icon.jpg"
     },
     "action": {
       "default_popup": "popup.html",
       "default_icon": {
-        "16": "",
-        "48": "",
-        "128": ""
+        "16": "icon.jpg",
+        "48": "icon.jpg",
+        "128": "icon.jpg"
       }
     }
   }
